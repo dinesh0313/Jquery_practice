@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Filter</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    
+</head>
+<body>
+    <p>This paragraph will not be highlighted.</p>
+    <p>This paragraph contains the word highlight.</p>
+    <p>Another paragraph to  with the word </p>
+    <ul>
+        <li>item1</li>
+        <li>item2</li>
+        <li>item3</li>
+        <li>item4</li>
+    </ul>
+
+    <script>
+        $(document).ready(function () {
+            // Select and highlight paragraphs containing the word 'highlight'
+            $("p").filter(":contains('highlight')").css("background-color", "yellow");
+            $("p").filter(":contains('Another')").css("background-color","red");
+            $("li").not(":nth-child(2)").css("color", "blue");
+            $("li").not(":nth-child(3)").css("color","pink");
+            $("li").first().css("font-weight", "bold");
+            $("li").last().css("font-style", "italic");
+            $("li").eq(1).css("background-color", "lightblue");//index start from 0
+        });
+    </script>
+</body>
+</html>

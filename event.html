@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Click Event</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#clickButton").click(function () {
+                alert("Button was clicked!");
+            });
+
+            $("#hovor").hover(function(){
+                $(this).css("background-color","red");
+            },
+            function(){
+                $(this).css("background-color","green");
+            })
+
+            $("#inputField").keydown(function (event) {
+                // this is show the typed key 
+                $("#output").text("Key pressed: " + event.key);
+            });
+        });
+    </script>
+</head>
+<body>
+    <button id="clickButton">Click Me</button>
+    <div id="hovor" style="height: 100px; width: 100px">hello</div>
+    <input type="text" id="inputField" placeholder="type here">
+    <p id="output"></p>
+</body>
+</html>

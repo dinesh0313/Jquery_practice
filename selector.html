@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="namelabel" class="name" style="height: 100px; width: 100px">name</div>
+    <input type="text" >
+    <p>hello how are you ??</p>
+    <p id="hello">click here to change the color</p>
+
+
+    <script>
+    $(document).ready(function()
+    {
+        //jquery selector
+        // Select an element with the ID 'myId' and change its background color
+        $(".name").css("background-color", "yellow");
+        $("#namelabel").css("background-color", "red");
+        // Select all <p> elements and change their text color
+        $("p").css("color","red");
+        // Select all input elements with the type 'text'
+        $("input[type='text']").css("border", "22px solid yello");
+
+        $("#hello").click(function(){
+            $("body").css("background-color","green");
+        })
+        
+        
+
+    });
+    </script>
+</body>
+</html>
